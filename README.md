@@ -142,6 +142,38 @@ Git本地有三个工作区:工作目录(Working Directory)、暂存区(Stage/In
 build/      	#忽略build/目录下的所有文件
 doc/*.txt  	#会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 ```
- 	
+
+### 分支操作
+---
+
+- **列出所有本地分支:**
+	```shell
+    $ git branch
+    ```
+- **列出所有远程分支:**
+	```shell
+    $ git branch -r
+    ```
+ - **新建一个分支,但依然停留在当前分支:**
+	```shell
+    $ git branch [branch-name]
+    ```
+- **新建一个分支,并切换到该分支:**
+	```shell
+    $ git checkout -b [branch]
+    ```
+- **合并指定分支到当前分支:**
+	```shell
+    $ git merge [branch]
+    ```
+ - **删除分支:**
+	```shell
+    $ git branch -d [branch-name]
+    ```
+ - **删除远程分支:**
+	```shell
+    $ git push origin --delete [branch-name]
+    $ git branch -dr [remote/branch]
+    ```
 
 
